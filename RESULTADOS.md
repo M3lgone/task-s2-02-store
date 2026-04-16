@@ -2,11 +2,11 @@
 
 
 ## 📈 Resumen
-✅ 16 correctas de 26 queries
+✅ 19 correctas de 26 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -20,7 +20,7 @@
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.25 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -41,156 +41,85 @@
 +++ 
 @@ -1,4 +1,4 @@
 -nom del producte | euros | dòlars
-+nombre_del_producto | euros | dolares
++nombre_del_producto | euros | dòlars
  Disco duro SATA3 1TB | 86.99 | 95.69
  Memoria RAM DDR4 8GB | 120.00 | 132.00
  Disco SSD 1 TB | 150.99 | 166.09
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 6: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio
-+upper(nombre) | precio
- DISCO DURO SATA3 1TB | 86.99
- MEMORIA RAM DDR4 8GB | 120.00
- DISCO SSD 1 TB | 150.99
-```
+## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.26 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 7: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio
-+LOWER(nombre) | precio
- disco duro sata3 1tb | 86.99
- memoria ram ddr4 8gb | 120.00
- disco ssd 1 tb | 150.99
-```
+## ✅ Query 7: Correcto
+
+⏱ Tiempo: 0.26 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
+
+## ❌ Query 8: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM fabricante' at line 6
+
+
+## ✅ Query 9: Correcto
+
+⏱ Tiempo: 0.26 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
+
+## ❌ Query 10: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'truncado
+FROM producto' at line 3
+
+
+## ✅ Query 11: Correcto
 
 ⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 8: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,10 +1,10 @@
- nombre | iniciales
--Asus | AS
--Lenovo | LE
--Hewlett-Packard | HE
--Samsung | SA
--Seagate | SE
--Crucial | CR
--Gigabyte | GI
--Huawei | HU
--Xiaomi | XI
-+Asus | ASus
-+Lenovo | LEnovo
-+Hewlett-Packard | HEwlett-packard
-+Samsung | SAmsung
-+Seagate | SEagate
-+Crucial | CRucial
-+Gigabyte | GIgabyte
-+Huawei | HUawei
-+Xiaomi | XIaomi
-```
-
-⏱ Tiempo: 0.34 ms
-🔍 No se usó ningún índice en esta consulta.
-
----
-
-## ✅ Query 9: Correcto
-
-⏱ Tiempo: 0.31 ms
-🔍 No se usó ningún índice en esta consulta.
-
----
-
-## ❌ Query 10: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,12 +1,12 @@
--nombre | precio truncado
--Disco duro SATA3 1TB | 86.00
-+nombre | precio_truncado
-+Disco duro SATA3 1TB | 86.90
- Memoria RAM DDR4 8GB | 120.00
--Disco SSD 1 TB | 150.00
-+Disco SSD 1 TB | 150.90
- GeForce GTX 1050Ti | 185.00
- GeForce GTX 1080 Xtreme | 755.00
- Monitor 24 LED Full HD | 202.00
--Monitor 27 LED Full HD | 245.00
-+Monitor 27 LED Full HD | 245.90
- Portátil Yoga 520 | 559.00
- Portátil Ideapd 320 | 444.00
--Impresora HP Deskjet 3720 | 59.00
-+Impresora HP Deskjet 3720 | 59.90
- Impresora HP Laserjet Pro M26nw | 180.00
-```
-
-⏱ Tiempo: 0.30 ms
-🔍 No se usó ningún índice en esta consulta.
-
----
-
-## ✅ Query 11: Correcto
-
-⏱ Tiempo: 0.29 ms
-🔍 No se usó ningún índice en esta consulta.
-
----
-
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.26 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -200,7 +129,7 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.44 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 🚨 **Problemas detectados:**
@@ -210,94 +139,56 @@
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
-## ❌ Query 21: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio | nombre del fabricante
-+producto | precio | fabricante
- Disco duro SATA3 1TB | 86.99 | Seagate
- Memoria RAM DDR4 8GB | 120.00 | Crucial
- Disco SSD 1 TB | 150.99 | Samsung
-```
+## ❌ Query 21: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'del fabricante
+FROM producto p
+JOIN fabricante f 
+ON p.codigo_fabricante = f.cod' at line 5
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
----
+## ❌ Query 22: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'del fabricante
+FROM producto p
+JOIN fabricante f
+ON p.codigo_fabricante = f.codi' at line 5
 
-## ❌ Query 22: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio | nombre del fabricante
-+nombre | precio | nombre_del_fabricante
- Monitor 24 LED Full HD | 202.00 | Asus
- Monitor 27 LED Full HD | 245.99 | Asus
- Memoria RAM DDR4 8GB | 120.00 | Crucial
-```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
+## ❌ Query 23: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'del fabricante
+FROM producto p
+JOIN fabricante f
+ON p.codigo_fabricante = f.codi' at line 6
 
----
 
-## ❌ Query 23: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--codigo | nombre | codigo fabricante | nombre fabricante
-+codigo | nombre | codigo_fabricante | nombre_del_fabricante
- 1.00 | Disco duro SATA3 1TB | 5.00 | Seagate
- 2.00 | Memoria RAM DDR4 8GB | 6.00 | Crucial
- 3.00 | Disco SSD 1 TB | 4.00 | Samsung
-```
+## ✅ Query 24: Correcto
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
-
----
-
-## ❌ Query 24: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,2 +1,2 @@
--nombre | precio | fabricant
-+nombre | precio | fabricante
- Impresora HP Deskjet 3720 | 59.99 | Hewlett-Packard
-```
-
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 25: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
