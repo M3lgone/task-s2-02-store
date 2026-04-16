@@ -15,7 +15,7 @@ SELECT nombre, precio AS precio_eur, precio AS precio_usd
 FROM producto;
 
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
-SELECT nombre AS nombre_del_producto,
+SELECT nombre AS `nom del producte`
 CAST(precio AS DECIMAL(10,2)) AS euros, 
 CAST(precio * 1.1 AS DECIMAL(10,2)) AS dòlars
 FROM producto;
@@ -29,10 +29,9 @@ SELECT LOWER(nombre) AS nombre, precio
 FROM producto;
 
 -- 8. Llista el nom de tots els fabricants en una columna, i en una altra columna obtingui en majúscules els dos primers caràcters del nom del fabricant (iniciales).
-SELECT nombre,
-CONCAT(
-	UPPER(LEFT(nombre,2)) 
-	AS iniciales
+SELECT 
+    nombre,
+    UPPER(LEFT(nombre, 2)) AS iniciales
 FROM fabricante;
 
 -- 9. Llista els noms i els preus dels productes, arrodonint el valor del preu (precio)
@@ -42,7 +41,7 @@ FROM producto;
 
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 SELECT nombre, 
-ROUND(precio, 1) AS precio truncado
+ROUND(precio, 1) AS `precio truncado`
 FROM producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
@@ -100,7 +99,7 @@ WHERE codigo_fabricante = 2;
 SELECT 
     p.nombre AS nombre,
     p.precio,
-    f.nombre AS nombre del fabricante
+    f.nombre AS `nombre del fabricante`
 FROM producto p
 JOIN fabricante f 
 ON p.codigo_fabricante = f.codigo;
@@ -109,7 +108,7 @@ ON p.codigo_fabricante = f.codigo;
 SELECT 
 	  p.nombre, 
 	  p.precio, 
-	  f.nombre AS nombre del fabricante
+	  f.nombre AS `nombre del fabricante`
 FROM producto p
 JOIN fabricante f
 ON p.codigo_fabricante = f.codigo
@@ -119,12 +118,11 @@ ORDER BY nombre_del_fabricante ASC;
 SELECT 
     p.codigo,
     p.nombre,
-    p.codigo fabricante,
-    f.nombre AS nombre del fabricante
+    p.codigo_fabricante AS `codigo fabricante`,
+    f.nombre AS `nombre del fabricante`
 FROM producto p
 JOIN fabricante f
 ON p.codigo_fabricante = f.codigo;
-
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
 SELECT
